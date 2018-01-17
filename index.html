@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Strukturierte Diskussionen &ndash; und nun?</title>
+
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal.js/lib/css/github.css">
+
+  <link rel="stylesheet" href="css/theme/hhu/hhu.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <style>
+    .bg-blue {
+      background-color: #176fc1;
+    }
+
+    .bg-red {
+      background-color: #be0a26;
+    }
+
+    .bg-green {
+      background-color: #97bf0d;
+    }
+
+    .bg-grey {
+      background-color: #d9dadb;
+    }
+
+    .box-white {
+      background-color: white;
+      border: 0.5px solid #176fc1 !important;
+    }
+
+    .controls button {
+      color: #d9dadb !important;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div id="logo">
+    <object data="css/theme/hhu/img/unilogo.svg" type="image/svg+xml"></object>
+  </div>
+  <header><span></span></header>
+  <div id="slidenumber"></div>
+
+  <div class="slides">
+    <section data-state="footer">
+      <div id="title">
+        <h4>Strukturierte Diskussionen &ndash; und nun?</h4>
+        <hr/>
+        <p style="font-size: 0.8em;">
+          <strong>Christian Meter</strong>
+        </p>
+        <small>
+          Argumentationssysteme: Irgendwas mit Pferden und Hühnern<br><br>
+          Institut für Informatik<br>
+          Heinrich-Heine-Universität Düsseldorf<br>
+          <br>
+          meter@cs.uni-duesseldorf.de
+        </small>
+      </div>
+    </section>
+
+    <section data-state="motivation">
+      <style>.motivation header span:after {
+        content: "Motivation";
+      } </style>
+      <div class="row">
+        <div class="col-4">
+          <img src="img/drawings/unstructured.png" style="width:200px;" alt="">
+        </div>
+        <div class="col-8">
+          <p>Diskussionen im Internet sind meistens unstrukturierter Natur</p>
+          <p>Dennoch wird man motiviert seine Meinung zu äußern</p>
+          <small>
+            <p>
+              "Hinterlasst mir einen Kommi unter dem Video", "Was ist Ihre Meinung dazu?", ...
+            </p>
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <section data-state="motivation">
+      <div class="row">
+        <div class="col-4">
+          <img src="img/drawings/unstructured.png" style="width:200px;" alt="">
+        </div>
+        <div class="col-8">
+          <h4>Probleme</h4>
+          <p>zu viele Beiträge</p>
+          <p>zu viele Meinungen für einen produktiven Diskurs</p>
+          <p>Redundante Aussagen</p>
+        </div>
+      </div>
+    </section>
+
+    <section data-state="dbas">
+      <style>.dbas header span:after {
+        content: "D-BAS";
+      } </style>
+      <h3>Ein dialogbasierter Ansatz</h3>
+      <p>Ziel: strukturierte Diskussionen</p>
+      <p>Reduziere Redundanz</p>
+      <p>Fokussiere auf Argumentation</p>
+      <p>Unterstützt mit Argumentation Theory</p>
+    </section>
+
+    <section data-state="dbas">
+      <h3>Ein dialogbasierter Ansatz</h3>
+      <ul>
+        <li>Stelle Meinungen der User dar, die vorher an der Diskussion teilgenommen haben</li>
+        <li>Führe einen Dialog mit (untrainierten) Usern:</li>
+      </ul>
+      <img src="img/feedbackloop.png" alt="">
+    </section>
+
+    <section data-state="dbas-principle">
+      <style>.dbas-principle header span:after {
+        content: "D-BAS: Prinzip";
+      } </style>
+      <img src="img/drawings/dbas-system.png" style="width:600px;" alt="">
+      <p>Welche Vorteile bringen strukturierte Argumente?</p>
+    </section>
+
+    <section data-state="dbas-components">
+      <style>.dbas-components header span:after {
+        content: "D-BAS: Komponenten";
+      } </style>
+      <img src="img/drawings/dbas-components.png" style="width:500px;" alt="">
+      <p>Die Schnittstelle ermöglicht es uns neue Anwendungen mit dialogbasiertem Backend zu entwickeln</p>
+    </section>
+
+    <section data-state="use-cases">
+      <style>.use-cases header span:after {
+        content: "Anwendungsszenarien";
+      } </style>
+      <p>Verwenden wir doch dialogbasierte Diskussionen da, wo viele Menschen diskutieren</p>
+      <img src="img/drawings/unstructured-to-graph.png" style="width:400px;" alt="">
+      <p>Vorschläge?</p>
+    </section>
+
+    <section>
+      <img src="img/website_stripped_short.png" style="max-height: 550px"/>
+      <small>
+        <small>
+          <a href="https://www.nytimes.com/2017/06/13/insider/have-a-comment-leave-a-comment.html">
+            https://www.nytimes.com/2017/06/13/insider/have-a-comment-leave-a-comment.html
+          </a>
+        </small>
+      </small>
+      <aside class="notes">
+        <ul>
+          <li>Article from New York Times</li>
+          <li>new Machine-Learning Algorithm for comments</li>
+          <li>608 comments (5.7.17)</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section>
+      <img src="img/comments_7.png" alt=""/>
+    </section>
+
+    <section data-background="img/big_comment.png">
+      <p class="box-white fragment">
+        30 Kommentare mit ~3000 Wörtern...<br>
+        ... die anderen 578 Kommentare müssen wir uns auch noch anschauen
+      </p>
+    </section>
+
+    <section data-state="real-world">
+      <style>.real-world header span:after {
+        content: "Echtweltszenario";
+      } </style>
+      <p>Wie viele Kommentare erhalten Onlineredaktionen?</p>
+      <p>&nbsp;</p>
+      <div class="fragment">
+        <blockquote>
+          "Since 7am this morning, people have left <span id="articleAmount"></span> comments on the Guardian.
+          About <span id="blockedAmount"></span> were
+          blocked by our moderators."
+        </blockquote>
+
+        <small>
+          <small>
+            <a href="https://www.theguardian.com/technology/2016/apr/12/the-dark-side-of-guardian-comments">
+              https://www.theguardian.com/technology/2016/apr/12/the-dark-side-of-guardian-comments
+            </a>
+          </small>
+        </small>
+      </div>
+    </section>
+
+    <section data-state="example">
+      <style>.example header span:after {
+        content: "Beispielanwendung";
+      } </style>
+      <h3>discuss</h3>
+      <p>einbettbar in existierende Websites</p>
+      <p>Dialog-Based Execution Platform im Backend</p>
+      <p>Strukturierte Diskussionen in beliebigen Web-Kontexten</p>
+      <p>Globale Diskussionen</p>
+    </section>
+
+    <section data-state="example">
+      <h3>News Feed</h3>
+      <p>&nbsp;</p>
+      <p class="fragment">
+        <a href="https://discuss.cs.uni-duesseldorf.de" data-preview-link>Botanical Garden Saved!</a>
+      </p>
+      <p><small><small>Anklicken für Demo</small></small></p>
+    </section>
+
+    <section data-state="social-networks">
+      <p>Bringen wir dialogbasierte Diskussionen z.B. nach Facebook</p>
+      <img src="img/drawings/dbas-to-facebook.png" style="width:250px;" alt="">
+      <p>Welche Vorteile könnte das bringen?</p>
+      <p>Was sind Anwendungsszenarien innerhalb von Facebook?</p>
+    </section>
+
+    <section data-state="social-networks">
+      <style>.social-networks header span:after {
+        content: "Soziale Netzwerke";
+      } </style>
+      <h4>Facebook</h4>
+      <p>2,07 Milliarden Benutzer in Q3 2017<br>davon 1,37 Mrd täglich aktiv
+        <sup>
+          <small>
+            <small><a href="https://zephoria.com/top-15-valuable-facebook-statistics/">[1]</a></small>
+          </small>
+        </sup>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h4>Twitter</h4>
+      <p>330 Millionen aktive Benutzer im September 2017
+        <sup>
+          <small>
+            <small><a href="https://www.statista.com/statistics/282087/number-of-monthly-active-twitter-users/">[2]</a>
+            </small>
+          </small>
+        </sup>
+      </p>
+    </section>
+
+    <section data-state="social-networks-problems">
+      <style>.social-networks-problems header span:after {
+        content: "Integration in Soziale Netze";
+      } </style>
+      <h4>Welche Probleme treten bei der Integration dialogbasierter Diskussionen auf?</h4>
+      <div class="fragment">
+        <p>Chats / Posts sind Freitextfelder</p>
+        <p>Kaum Kontrolle über Diskussionsfluss</p>
+        <p>... und irgendwie wäre ein geführter Diskussionsfluss untypisch für die Plattformen</p>
+      </div>
+    </section>
+
+    <section data-state="social-networks-problems">
+      <h4>Freitextfelder</h4>
+      <p>Um Inhalte aus Freitextfeldern zu extrahieren, brauchen wir eine Form der Sprach- / Textverarbeitung</p>
+      <p>Außerdem zeigt sich hier, ob unsere Systeme wirklich "dialogbasiert" funktionieren können</p>
+    </section>
+
+    <section data-state="machine-learning">
+      <style>.machine-learning header span:after {
+        content: "Machine Learning";
+      } </style>
+      <div>
+        <img src="img/google_assistant.gif" style="width: 250px;" alt="">
+      </div>
+      <p>Machine Learning ermöglicht Verarbeitung von Text und Sprache in natürlicher Weise</p>
+      <p>Damit können wir Inhalte aus Freitexten analysieren</p>
+      <p>Schnittstellen zu allen großen Sozialen Netzwerken</p>
+      <small><small>Bild: <a href="https://assets.materialup.com/uploads/a02a32db-1dd9-4ab7-ba5a-1a66c88c25f5/preview.gif">materialup.com</a></small></small>
+    </section>
+
+    <section data-state="machine-learning">
+      <div>
+        <img src="img/KIs.png" style="width: 400px;" alt="">
+      </div>
+      <p>Künstliche Intelligenzen verwenden und treiben Machine Learning voran</p>
+      <p>Viele Frameworks werden mittlerweile zur Textanalyse angeboten</p>
+      <p>In kleinem Maße auch kostenfrei</p>
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <style>.machine-learning-and-dbas header span:after {
+        content: "Machine Learning und D-BAS";
+      } </style>
+      <div>
+        <img src="img/drawings/dbas-ai.png" style="width: 400px;" alt="">
+      </div>
+      <p>Wir planen nun Techniken aus dem Machine Learning zur Textverarbeitung zu verwenden, um die Eingabe an
+        D-BAS weiterzureichen</p>
+      <small>
+        <small>Wir verwenden Googles <a href="https://dialogflow.com/">Dialogflow</a></small>
+      </small>
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <div>
+        <img src="img/drawings/dbas-ai.png" style="width: 400px;" alt="">
+      </div>
+      <p>Welche Probleme gibt es, wenn ich von einem strukturiertem System zu einer freien Form der Unterhaltung
+        wechsle?</p>
+      <small>
+        <small>&nbsp;</small>
+      </small>
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <h4>Welche Probleme gibt es, wenn ich von einem strukturiertem System zu einer freien Form der Unterhaltung
+        wechsle?</h4>
+      <p>Verständnisprobleme bei der Interpretation der Eingabe</p>
+      <p>Interfaces von Sozialen Netzwerken nicht mächtig genug</p>
+      <p>"Gespräche" mit Chatbots eher unnatürlich</p>
+      <p>...</p>
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <h4>Wie unterhalte ich mich "natürlich" mit einem Chatbot?</h4>
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <img src="img/jeb_topics.png" style="width: 400px" alt="">
+    </section>
+
+    <section data-state="machine-learning-and-dbas">
+      <img src="img/jeb_failed.png" style="width: 400px" alt="">
+      <p>Wir haben noch viel zu Lernen...</p>
+    </section>
+
+    <section data-state="open-questions">
+      <style>.open-questions header span:after {
+        content: "Offene Fragestellungen";
+      } </style>
+      <p>Wie sieht der Sprachfluss mit einem Chatbot im dialogbasierten Diskussionskontext aus?</p>
+      <p>Was für Typen von Usern nehmen an meiner Diskussion teil?</p>
+      <p>Worüber wird gesprochen?</p>
+      <p>Welche Themenbereiche sind besonders interessant?</p>
+      <p>Können wir einen Konsens finden?</p>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <section data-state="final">
+      <style>.final header span:after {
+        content: "Strukturierte Diskussionen -- und nun?";
+      } </style>
+
+      <h5>Was wir heute gelernt haben</h5>
+      <small>
+        <ul>
+          <li>Überall im Internet wird diskutiert</li>
+          <li>Dialogbasierte Argumentationen können Struktur in Diskussionen bringen</li>
+          <li>Dadurch addressieren wir Probleme großer Diskussionen im Internet</li>
+          <li>Einblick in die aktuelle Forschung</li>
+          <li>Offene Fragen und Möglichkeiten im Bereich der (dialogbasierten) Online Argumentation</li>
+        </ul>
+      </small>
+
+      <div>
+        <img src="img/cortana_meaning_of_life.gif" style="width: 250px;" alt="">
+      </div>
+
+      <h6 style="">Christian Meter<br>
+        <small>
+          meter@cs.uni-duesseldorf.de
+        </small>
+      </h6>
+
+      <small><small>Animation: <a href="https://cdn.dribbble.com/users/134566/screenshots/2177092/open-uri20150803-3-14b7bi9">dribble.com</a></small></small>
+
+    </section>
+
+  </div>
+</div>
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        controlsTutorial: false,
+        controlsBackArrows: 'visible',
+        history: true,
+        center: true,
+        // slideNumber: true,
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            /* { src: 'plugin/markdown/marked.js' },
+             { src: 'plugin/markdown/markdown.js' },*/
+            {src: 'reveal.js/plugin/notes/notes.js', async: true},
+            {
+                src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+<script>
+    var t = new Date,
+        e = t.getDate(),
+        n = t.getMonth(),
+        r = t.getFullYear(),
+        i = t.getHours();
+    7 > i && e--;
+    var s = new Date(r, n, e, 7, 0, 0, 0),
+        l = s.getTime();
+    setInterval(function () {
+        var t = Date.now(),
+            r = 56321,
+            o = .017861,
+            a = r / 86400,
+            e = Math.floor((t - l) / 1e3),
+            n = Math.round(e * a),
+            r = Math.round(n * o);
+        document.getElementById("articleAmount").innerHTML = n.toLocaleString();
+        document.getElementById("blockedAmount").innerHTML = r.toLocaleString();
+    }, 1e3);
+</script>
+</body>
+</html>
